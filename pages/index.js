@@ -1,25 +1,32 @@
-import Head from 'next/head';
-import grants from '../data/grants.json';
+import Layout from '../components/Layout'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="p-6">
-      <Head>
-        <title>Art Grants Directory</title>
-      </Head>
-      <h1 className="text-2xl font-bold mb-4">Art Grants</h1>
-      <ul className="space-y-4">
-        {grants.map((grant, idx) => (
-          <li key={idx} className="border p-4 rounded">
-            <h2 className="text-xl font-semibold">{grant.grantName}</h2>
-            <p>Country: {grant.country}</p>
-            <p>Amount: {grant.grantAmount}</p>
-            <a className="text-blue-500 underline" href={grant.website} target="_blank" rel="noopener noreferrer">
-              Visit Website
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout>
+      <div className="text-center max-w-xl mx-auto mt-20">
+        <h1 className="text-4xl font-bold mb-6">Find the Right Art Grant for You</h1>
+        <p className="mb-8 text-gray-700">
+          Browse and discover art grants available in the US and Canada. Filter by discipline, amount, and more.
+        </p>
+        
+        <div className="mb-8">
+          {/* Placeholder for a future search bar component */}
+          <input
+            type="text"
+            className="border rounded px-4 py-2 w-full mb-4"
+            placeholder="Search grants..."
+          />
+          <div className="flex justify-center space-x-4">
+            <Link href="/grants?country=USA" className="underline text-blue-600">USA Grants</Link>
+            <Link href="/grants?country=Canada" className="underline text-blue-600">Canada Grants</Link>
+          </div>
+        </div>
+
+        <Link href="/grants" className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+          View All Grants
+        </Link>
+      </div>
+    </Layout>
   )
 }
