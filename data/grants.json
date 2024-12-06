@@ -769,5 +769,115 @@
         "applicationFrequency": "Multiple deadlines/year",
         "keyRequirements": "Artists of all career stages, portfolio, project proposal",
         "typicalDeadlines": ["Varies by residency program"]
+      },
+      {
+        "grantName": "Arts Council England Project Grants",
+        "country": "UK (England)",
+        "fundingOrganization": "Arts Council England",
+        "website": "https://www.artscouncil.org.uk/projectgrants",
+        "grantAmount": "£1,000 - £100,000+",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Combined Arts", "Museums"],
+        "applicationFrequency": "Rolling",
+        "keyRequirements": "Professional artists/groups in England, strong artistic outcomes, public engagement",
+        "typicalDeadlines": ["Rolling"]
+      },
+      {
+        "grantName": "Jerwood Arts Grants",
+        "country": "UK",
+        "fundingOrganization": "Jerwood Arts",
+        "website": "https://jerwoodarts.org/",
+        "grantAmount": "Varies, often £1,000 - £50,000",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literary", "Film", "Interdisciplinary"],
+        "applicationFrequency": "Annual or Multiple Calls",
+        "keyRequirements": "Early-career artists/curators, innovative projects, UK-based",
+        "typicalDeadlines": ["Varies by call"]
+      },
+      {
+        "grantName": "Creative Scotland Open Fund",
+        "country": "UK (Scotland)",
+        "fundingOrganization": "Creative Scotland",
+        "website": "https://www.creativescotland.com/funding",
+        "grantAmount": "£1,000 - £100,000+",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Film", "Crafts"],
+        "applicationFrequency": "Rolling",
+        "keyRequirements": "Individuals or organizations in Scotland, artistic merit, public benefit",
+        "typicalDeadlines": ["Rolling"]
+      },
+      {
+        "grantName": "Arts Council of Wales - Creative Wales Awards",
+        "country": "UK (Wales)",
+        "fundingOrganization": "Arts Council of Wales",
+        "website": "https://arts.wales/",
+        "grantAmount": "Varies, often up to £25,000 or more",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "New Media"],
+        "applicationFrequency": "Annual or Multiple Calls",
+        "keyRequirements": "Wales-based artists, career development, significant artistic potential",
+        "typicalDeadlines": ["Varies by program"]
+      },
+      {
+        "grantName": "Arts Council Northern Ireland Grants",
+        "country": "UK (Northern Ireland)",
+        "fundingOrganization": "Arts Council of Northern Ireland",
+        "website": "http://artscouncil-ni.org/",
+        "grantAmount": "£500 - £50,000+",
+        "eligibleDisciplines": ["Visual Arts", "Theatre", "Dance", "Literature", "Music", "Crafts", "Film"],
+        "applicationFrequency": "Multiple deadlines per year",
+        "keyRequirements": "NI-based artists or orgs, project proposal, artistic excellence",
+        "typicalDeadlines": ["Varies by program"]
+      },
+      {
+        "grantName": "Paul Hamlyn Foundation Arts-based Grants",
+        "country": "UK",
+        "fundingOrganization": "Paul Hamlyn Foundation",
+        "website": "https://www.phf.org.uk/",
+        "grantAmount": "£5,000 - £200,000+ (over multiple years)",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Community Arts"],
+        "applicationFrequency": "Multiple calls/year",
+        "keyRequirements": "UK-based charitable orgs or projects, social impact through the arts, community focus",
+        "typicalDeadlines": ["Varies"]
+      },
+      {
+        "grantName": "The Henry Moore Foundation Grants",
+        "country": "UK",
+        "fundingOrganization": "Henry Moore Foundation",
+        "website": "https://www.henry-moore.org/grants",
+        "grantAmount": "£500 - £20,000",
+        "eligibleDisciplines": ["Sculpture", "Visual Arts", "3D media"],
+        "applicationFrequency": "Annual or Biannual",
+        "keyRequirements": "Support for sculpture exhibitions, publications, research; UK-based or UK-related projects",
+        "typicalDeadlines": ["Varies, often Spring/Autumn"]
+      },
+      {
+        "grantName": "Film and TV Charity - Various Grants",
+        "country": "UK",
+        "fundingOrganization": "The Film and TV Charity",
+        "website": "https://filmtvcharity.org.uk/",
+        "grantAmount": "Varies, often up to £5,000 or more",
+        "eligibleDisciplines": ["Film", "Television", "Media Production"],
+        "applicationFrequency": "Multiple intakes/year",
+        "keyRequirements": "UK film/TV professionals in need of project support or personal development",
+        "typicalDeadlines": ["Varies by fund"]
+      },
+      {
+        "grantName": "British Council Creative Commissions",
+        "country": "UK",
+        "fundingOrganization": "British Council",
+        "website": "https://www.britishcouncil.org/",
+        "grantAmount": "Varies, often £5,000 - £50,000",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literary Arts", "Interdisciplinary"],
+        "applicationFrequency": "Occasional Calls",
+        "keyRequirements": "Projects fostering international collaboration, UK-based lead partner",
+        "typicalDeadlines": ["Varies by programme"]
+      },
+      {
+        "grantName": "a-n The Artists Information Company Bursaries",
+        "country": "UK",
+        "fundingOrganization": "a-n The Artists Information Company",
+        "website": "https://www.a-n.co.uk/",
+        "grantAmount": "£500 - £3,000",
+        "eligibleDisciplines": ["Visual Arts", "Interdisciplinary Arts"],
+        "applicationFrequency": "Annual or Multiple Calls",
+        "keyRequirements": "UK-based artists, a-n membership often required, support for development or projects",
+        "typicalDeadlines": ["Varies, often Winter/Spring"]
       }
     ]

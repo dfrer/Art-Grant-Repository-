@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import Layout from '../../components/Layout'
 import grantsData from '../../data/grants.json'
 import Link from 'next/link'
-import Flag from 'react-world-flags' // Import the flag library
+import Flag from 'react-world-flags' // Flag rendering library
 
 // Helper function to map country names to ISO codes
 function getCountryCode(country) {
@@ -13,7 +13,10 @@ function getCountryCode(country) {
   if (lowerCountry.includes('canada')) {
     return 'CA'
   }
-  return '' // Empty string if no match
+  if (lowerCountry.includes('uk') || lowerCountry.includes('england') || lowerCountry.includes('scotland') || lowerCountry.includes('wales') || lowerCountry.includes('northern ireland')) {
+    return 'GB'
+  }
+  return '' // Default to an empty string if no match
 }
 
 export default function GrantsPage() {
@@ -89,6 +92,7 @@ export default function GrantsPage() {
               <option value="All">All Countries</option>
               <option value="USA">USA</option>
               <option value="Canada">Canada</option>
+              <option value="UK">UK</option>
             </select>
 
             {/* Discipline Filter */}
@@ -137,6 +141,7 @@ export default function GrantsPage() {
           <option value="All">All Countries</option>
           <option value="USA">USA</option>
           <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
         </select>
 
         {/* Discipline Filter */}
