@@ -1,0 +1,24 @@
+[
+  {
+    "grantName": "NEA Grants for Arts Projects",
+    "country": "USA",
+    "fundingOrganization": "National Endowment for the Arts",
+    "website": "https://www.arts.gov/grants",
+    "grantAmount": "$10,000 - $100,000",
+    "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literary Arts", "Multidisciplinary"],
+    "applicationFrequency": "2 cycles per year",
+    "keyRequirements": "Nonprofit status or fiscal sponsor, project narrative, budget, artistic samples",
+    "typicalDeadlines": ["February", "July"]
+  },
+  {
+    "grantName": "Canada Council Explore & Create Grants",
+    "country": "Canada",
+    "fundingOrganization": "Canada Council for the Arts",
+    "website": "https://canadacouncil.ca/funding/grants",
+    "grantAmount": "C$3,000 - C$100,000+",
+    "eligibleDisciplines": ["Visual Arts", "Media Arts", "Dance", "Theatre", "Music", "Literary Arts"],
+    "applicationFrequency": "Rolling (varies by component)",
+    "keyRequirements": "Canadian citizenship/permanent resident, professional artist status, artistic samples",
+    "typicalDeadlines": ["Various"]
+  }
+]
