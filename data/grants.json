@@ -1200,17 +1200,6 @@
         "typicalDeadlines": ["April"]
     },
     {
-        "grantName": "Zurich Arts Grants",
-        "country": "Switzerland",
-        "fundingOrganization": "Zurich Cultural Fund",
-        "website": "https://www.zcf.ch/",
-        "grantAmount": "CHF 10,000 - CHF 50,000",
-        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literary Arts", "Music", "Film"],
-        "applicationFrequency": "Annual",
-        "keyRequirements": "Swiss artists or organizations, projects enhancing Zurich's cultural landscape, innovative approaches",
-        "typicalDeadlines": ["April"]
-    },
-    {
         "grantName": "The Australia-New Zealand Arts Council Collaborative Grants",
         "country": "Australia, New Zealand",
         "fundingOrganization": "Australia Council for the Arts & Creative New Zealand",
