@@ -50,6 +50,7 @@ export default function GrantsPage() {
   const [disciplineFilter, setDisciplineFilter] = useState('All')
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
+  // Sync state with URL query parameters on initial load and when they change
   useEffect(() => {
     if (router.query.country) {
       setCountryFilter(router.query.country)
@@ -61,21 +62,26 @@ export default function GrantsPage() {
     }
   }, [router.query])
 
+  // Extract unique disciplines from grants data
   const disciplines = useMemo(() => {
     const allDisciplines = grantsData.flatMap(g => g.eligibleDisciplines || [])
     return Array.from(new Set(allDisciplines)).sort()
   }, [])
 
+  // Filter grants based on search term, country, and discipline
   const filteredGrants = useMemo(() => {
     return grantsData.filter(grant => {
+      // Search filter
       const matchesSearch = searchTerm === '' || (
         grant.grantName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         grant.fundingOrganization.toLowerCase().includes(searchTerm.toLowerCase())
       )
 
+      // Country filter
       const matchesCountry = countryFilter === 'All' || 
         grant.country.toLowerCase().includes(countryFilter.toLowerCase())
 
+      // Discipline filter
       const matchesDiscipline = disciplineFilter === 'All' ||
         grant.eligibleDisciplines.map(d => d.toLowerCase()).includes(disciplineFilter.toLowerCase())
 
@@ -83,9 +89,11 @@ export default function GrantsPage() {
     })
   }, [searchTerm, countryFilter, disciplineFilter])
 
+  // Handle pressing Enter in the search bar
   const handleSearchKeyDown = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault()
+      // Update URL with search query
       router.push({
         pathname: '/grants',
         query: {
@@ -96,6 +104,7 @@ export default function GrantsPage() {
     }
   }
 
+  // Handle country filter change
   const handleCountryChange = (e) => {
     setCountryFilter(e.target.value)
     router.push({
@@ -108,6 +117,7 @@ export default function GrantsPage() {
     })
   }
 
+  // Handle discipline filter change
   const handleDisciplineChange = (e) => {
     setDisciplineFilter(e.target.value)
     // Optional: Update URL for discipline as well if desired
@@ -117,6 +127,7 @@ export default function GrantsPage() {
     <Layout>
       <h1 className="text-3xl font-bold mb-4">All Grants</h1>
 
+      {/* Mobile Filters Button */}
       <div className="md:hidden mb-4">
         <button 
           onClick={() => setIsFilterOpen(true)} 
@@ -126,6 +137,7 @@ export default function GrantsPage() {
         </button>
       </div>
 
+      {/* Mobile Filter Drawer */}
       {isFilterOpen && (
         <div className="fixed inset-0 bg-white z-50 p-4 overflow-auto">
           <div className="flex justify-between items-center mb-4">
@@ -133,6 +145,7 @@ export default function GrantsPage() {
             <button onClick={() => setIsFilterOpen(false)} className="underline text-sm">Close</button>
           </div>
           <div className="flex flex-col space-y-4">
+            {/* Search Field */}
             <input
               type="text"
               className="border rounded px-4 py-2 w-full"
@@ -142,6 +155,7 @@ export default function GrantsPage() {
               onKeyDown={handleSearchKeyDown}
             />
 
+            {/* Country Filter */}
             <select
               className="border rounded px-4 py-2"
               value={countryFilter}
@@ -173,6 +187,7 @@ export default function GrantsPage() {
               <option value="Poland">Poland</option>
             </select>
 
+            {/* Discipline Filter */}
             <select
               className="border rounded px-4 py-2"
               value={disciplineFilter}
@@ -184,6 +199,7 @@ export default function GrantsPage() {
               ))}
             </select>
 
+            {/* Clear All Filters */}
             <button 
               onClick={() => {
                 setCountryFilter('All')
@@ -199,7 +215,9 @@ export default function GrantsPage() {
         </div>
       )}
 
+      {/* Desktop Filters */}
       <div className="hidden md:flex items-center space-x-4 mb-4">
+        {/* Search Input */}
         <input
           type="text"
           className="border rounded px-4 py-2"
@@ -209,6 +227,7 @@ export default function GrantsPage() {
           onKeyDown={handleSearchKeyDown}
         />
 
+        {/* Country Filter */}
         <select
           className="border rounded px-4 py-2"
           value={countryFilter}
@@ -240,6 +259,7 @@ export default function GrantsPage() {
           <option value="Poland">Poland</option>
         </select>
 
+        {/* Discipline Filter */}
         <select
           className="border rounded px-4 py-2"
           value={disciplineFilter}
@@ -252,6 +272,7 @@ export default function GrantsPage() {
         </select>
       </div>
 
+      {/* Grants Listing */}
       {filteredGrants.length === 0 ? (
         <p>No grants found matching your criteria.</p>
       ) : (
@@ -268,6 +289,17 @@ export default function GrantsPage() {
                   </span>
                   <span className="inline-flex items-center px-2 py-1 rounded bg-gray-100">
                     💰 {grant.grantAmount}
+                  </span>
+                </div>
+                {/* **Added Deadlines Display** */}
+                <div className="flex items-center flex-wrap gap-2 text-sm text-gray-600 mb-2">
+                  <span className="inline-flex items-center gap-2">
+                    📅 Deadline:
+                    {grant.typicalDeadlines && grant.typicalDeadlines.length > 0 ? (
+                      <span>{grant.typicalDeadlines.join(', ')}</span>
+                    ) : (
+                      <span>Not specified</span>
+                    )}
                   </span>
                 </div>
                 <p className="text-sm text-gray-700 mb-2">
