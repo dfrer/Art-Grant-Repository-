@@ -816,7 +816,7 @@
       },
       {
         "grantName": "Arts Council Northern Ireland Grants",
-        "country": "UK (Northern Ireland)",
+        "country": "Ireland",
         "fundingOrganization": "Arts Council of Northern Ireland",
         "website": "http://artscouncil-ni.org/",
         "grantAmount": "£500 - £50,000+",
@@ -1242,5 +1242,291 @@
         "applicationFrequency": "Multiple cycles per year",
         "keyRequirements": "Mexican artists or collectives, professional practice, detailed project proposal",
         "typicalDeadlines": ["March", "September"]
-    }
-]
+    },
+    {
+        "grantName": "Arts Projects for Individuals and Groups",
+        "country": "Australia",
+        "fundingOrganization": "Australia Council for the Arts",
+        "website": "https://australiacouncil.gov.au/funding/",
+        "grantAmount": "Varies (e.g., AUD 10,000+)",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Media Arts"],
+        "applicationFrequency": "Multiple rounds/year",
+        "keyRequirements": "Australian citizens/permanent residents, professional artist practice, project proposal",
+        "typicalDeadlines": ["Varies by round"]
+      },
+      {
+        "grantName": "Programa Jóvenes Creadores (Young Creators Program)",
+        "country": "Mexico",
+        "fundingOrganization": "FONCA (Fondo Nacional para la Cultura y las Artes)",
+        "website": "https://fonca.cultura.gob.mx/",
+        "grantAmount": "Varies (MXN amounts) depending on discipline",
+        "eligibleDisciplines": ["Visual Arts", "Literature", "Performing Arts", "Music", "Media Arts"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Mexican artists (emerging), portfolio, artistic project proposal",
+        "typicalDeadlines": ["Typically announced annually"]
+      },
+      {
+        "grantName": "Working Grants (Arbetsstipendier)",
+        "country": "Sweden",
+        "fundingOrganization": "Konstnärsnämnden (Swedish Arts Grants Committee)",
+        "website": "https://www.konstnarsnamnden.se/",
+        "grantAmount": "Varies (SEK amounts) as stipends",
+        "eligibleDisciplines": ["Visual Arts", "Music", "Dance", "Theatre", "Film", "Crafts"],
+        "applicationFrequency": "Annual or multiple calls",
+        "keyRequirements": "Swedish-based professional artists, portfolio, track record",
+        "typicalDeadlines": ["Varies by call"]
+      },
+      {
+        "grantName": "General Project Funding",
+        "country": "Germany",
+        "fundingOrganization": "Kulturstiftung des Bundes (German Federal Cultural Foundation)",
+        "website": "https://www.kulturstiftung-des-bundes.de/",
+        "grantAmount": "Varies (€5,000 - €100,000+)",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Interdisciplinary"],
+        "applicationFrequency": "Multiple deadlines/year",
+        "keyRequirements": "Projects of national significance, innovative cultural concept",
+        "typicalDeadlines": ["Varies by funding round"]
+      },
+      {
+        "grantName": "Arts Grants",
+        "country": "New Zealand",
+        "fundingOrganization": "Creative New Zealand",
+        "website": "https://www.creativenz.govt.nz/",
+        "grantAmount": "Varies (NZD amounts) depending on project scale",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Craft/Object Art"],
+        "applicationFrequency": "Several rounds per year",
+        "keyRequirements": "NZ citizens/residents, creative portfolio, project aligning with CNZ criteria",
+        "typicalDeadlines": ["Varies by round"]
+      },
+      {
+        "grantName": "Creation Grant",
+        "country": "Singapore",
+        "fundingOrganization": "National Arts Council Singapore",
+        "website": "https://www.nac.gov.sg/",
+        "grantAmount": "Varies (SGD amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Literature", "Dance", "Theatre", "Music"],
+        "applicationFrequency": "Annual or multiple cycles",
+        "keyRequirements": "Singaporean citizens/PR, professional practice, strong proposal for new work",
+        "typicalDeadlines": ["Varies by call"]
+      },
+      {
+        "grantName": "Project Funding",
+        "country": "Switzerland",
+        "fundingOrganization": "Pro Helvetia",
+        "website": "https://prohelvetia.ch/en/",
+        "grantAmount": "Varies (CHF amounts) by project type",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Design", "Interactive Media"],
+        "applicationFrequency": "Multiple calls/year",
+        "keyRequirements": "Swiss-based or Swiss-related projects, cultural relevance, professional quality",
+        "typicalDeadlines": ["Varies by programme"]
+      },
+      {
+        "grantName": "Aides individuelles à la création (Individual Creation Grants)",
+        "country": "France",
+        "fundingOrganization": "Cnap (Centre National des Arts Plastiques)",
+        "website": "https://www.cnap.fr/",
+        "grantAmount": "Varies (€ amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Photography", "New Media", "Design", "Crafts"],
+        "applicationFrequency": "Annual or multiple calls",
+        "keyRequirements": "France-based professional artists, portfolio, project proposal",
+        "typicalDeadlines": ["Varies by call"]
+      },
+      {
+        "grantName": "Werkbijdrage Kunstenaars",
+        "country": "Netherlands",
+        "fundingOrganization": "Mondriaan Fund",
+        "website": "https://www.mondriaanfonds.nl/",
+        "grantAmount": "Varies (€ amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Interdisciplinary Arts"],
+        "applicationFrequency": "Multiple rounds/year",
+        "keyRequirements": "Netherlands-based artists, professional status, artistic quality, portfolio",
+        "typicalDeadlines": ["Varies by round"]
+      },
+      {
+        "grantName": "Bursary Awards",
+        "country": "Ireland",
+        "fundingOrganization": "Arts Council Ireland",
+        "website": "https://www.artscouncil.ie/",
+        "grantAmount": "Varies (€ amounts) depending on discipline",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Film"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Ireland-based artists, portfolio, clear development plan",
+        "typicalDeadlines": ["Annually announced"]
+      },
+      {
+        "grantName": "Grant Program for Arts and Culture",
+        "country": "Japan",
+        "fundingOrganization": "The Japan Foundation",
+        "website": "https://www.jpf.go.jp/",
+        "grantAmount": "Varies (¥ amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Film"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Projects promoting cultural exchange, Japan-related content",
+        "typicalDeadlines": ["Annually announced"]
+      },
+      {
+        "grantName": "China National Arts Fund Project Grants",
+        "country": "China",
+        "fundingOrganization": "China National Arts Fund",
+        "website": "http://www.cnaf.cn/",
+        "grantAmount": "Varies (CNY amounts)",
+        "eligibleDisciplines": ["Traditional Arts", "Contemporary Arts", "Performing Arts", "Literature", "Folk Arts"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "China-based artists/orgs, projects enhancing Chinese arts and culture",
+        "typicalDeadlines": ["Annually announced"]
+      },
+      {
+        "grantName": "Editais Funarte de Artes Visuais (Funarte Visual Arts Calls)",
+        "country": "Brazil",
+        "fundingOrganization": "Funarte (Fundação Nacional de Artes)",
+        "website": "http://www.funarte.gov.br/",
+        "grantAmount": "Varies (BRL amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Photography", "Installation", "Public Art"],
+        "applicationFrequency": "Multiple calls/year",
+        "keyRequirements": "Brazilian artists/groups, adherence to call’s criteria, cultural relevance",
+        "typicalDeadlines": ["Varies by edital"]
+      },
+      {
+        "grantName": "National Art Scholarship",
+        "country": "India",
+        "fundingOrganization": "Lalit Kala Akademi",
+        "website": "http://lalitkala.gov.in/",
+        "grantAmount": "Varies (INR amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Painting", "Sculpture", "Printmaking"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Indian artists, age/experience criteria, portfolio",
+        "typicalDeadlines": ["Annually announced"]
+      },
+      {
+        "grantName": "Project Support (Prosjektstøtte)",
+        "country": "Norway",
+        "fundingOrganization": "Arts Council Norway (Kulturrådet)",
+        "website": "https://www.kulturradet.no/",
+        "grantAmount": "Varies (NOK amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Literature", "Music", "Crafts"],
+        "applicationFrequency": "Several deadlines/year",
+        "keyRequirements": "Norway-based artists/orgs, professional standard, cultural value",
+        "typicalDeadlines": ["Varies by round"]
+      },
+      {
+        "grantName": "Danish Arts Foundation Project Grants",
+        "country": "Denmark",
+        "fundingOrganization": "Danish Arts Foundation",
+        "website": "https://www.kunst.dk/",
+        "grantAmount": "Varies (DKK amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Literature", "Music", "Performing Arts", "Architecture", "Design"],
+        "applicationFrequency": "Multiple calls/year",
+        "keyRequirements": "Denmark-based professionals, innovative projects, artistic quality",
+        "typicalDeadlines": ["Varies by programme"]
+      },
+      {
+        "grantName": "Ayudas a la creación artística",
+        "country": "Spain",
+        "fundingOrganization": "Ministerio de Cultura y Deporte",
+        "website": "https://cultura.gob.es/",
+        "grantAmount": "Varies (€ amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Performing Arts", "Music", "Literature", "Audiovisual", "Heritage"],
+        "applicationFrequency": "Annual or multiple calls",
+        "keyRequirements": "Spain-based artists/orgs, proposal aligned with cultural goals",
+        "typicalDeadlines": ["Varies by call"]
+      },
+      {
+        "grantName": "FUS (Fondo Unico per lo Spettacolo)",
+        "country": "Italy",
+        "fundingOrganization": "Ministero della Cultura (MiC)",
+        "website": "https://cultura.gov.it/",
+        "grantAmount": "Varies (€ amounts)",
+        "eligibleDisciplines": ["Performing Arts", "Music", "Dance", "Theatre", "Opera"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Italian-based orgs/artists in performing arts, meet FUS criteria",
+        "typicalDeadlines": ["Annually announced"]
+      },
+      {
+        "grantName": "Stypendia Ministra Kultury i Dziedzictwa Narodowego (Scholarships of the Minister of Culture and National Heritage)",
+        "country": "Poland",
+        "fundingOrganization": "Ministry of Culture and National Heritage (MKiDN)",
+        "website": "https://www.gov.pl/web/kultura",
+        "grantAmount": "Varies (PLN amounts)",
+        "eligibleDisciplines": ["Visual Arts", "Music", "Literature", "Theatre", "Folk Arts"],
+        "applicationFrequency": "Annual or multiple calls",
+        "keyRequirements": "Polish citizens/artists, portfolio, cultural contribution",
+        "typicalDeadlines": ["Annually announced"]
+      },
+      {
+        "grantName": "Panavision New Filmmaker Program",
+        "country": "United States",
+        "fundingOrganization": "Panavision",
+        "website": "https://www.panavision.com/new-filmmaker-program",
+        "grantAmount": "Panavision camera and lens packages valued up to $60,000",
+        "eligibleDisciplines": ["Filmmaking"],
+        "applicationFrequency": "Ongoing",
+        "keyRequirements": "Emerging filmmakers in need of camera equipment and production support",
+        "typicalDeadlines": ["Ongoing"]
+      },
+      {
+        "grantName": "Trailblazer Grant",
+        "country": "United States",
+        "fundingOrganization": "Transgender Film Center",
+        "website": "https://www.transgenderfilmcenter.org/trailblazer-grant",
+        "grantAmount": "$10,000 for short films",
+        "eligibleDisciplines": ["Filmmaking"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Transgender filmmakers",
+        "typicalDeadlines": ["December 18, 2023"]
+      },
+      {
+        "grantName": "Power to the Pen Grant",
+        "country": "United States",
+        "fundingOrganization": "Power to the Pen",
+        "website": "https://powertothepengrant.org/",
+        "grantAmount": "$15,000 - $100,000",
+        "eligibleDisciplines": ["Writing", "Content Creation"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Writers, content creators, and artists who demonstrate a need for financial support to pursue their craft",
+        "typicalDeadlines": ["December 30, 2024"]
+      },
+      {
+        "grantName": "The Rauschenberg Foundation Artist as Activist Fellowship",
+        "country": "United States",
+        "fundingOrganization": "The Rauschenberg Foundation",
+        "website": "https://www.rauschenbergfoundation.org/",
+        "grantAmount": "Up to $4,000",
+        "eligibleDisciplines": ["Dance", "Activist Arts"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Emerging and established dancers",
+        "typicalDeadlines": ["December 10, 2024"]
+      },
+      {
+        "grantName": "The Roy Dean Grant",
+        "country": "United States",
+        "fundingOrganization": "From the Heart Productions",
+        "website": "https://fromtheheartproductions.com/",
+        "grantAmount": "$3,000",
+        "eligibleDisciplines": ["Filmmaking"],
+        "applicationFrequency": "Annual",
+        "keyRequirements": "Open to filmmakers of all levels for short, documentary, and feature films",
+        "typicalDeadlines": ["January 1, 2025"]
+      },
+      {
+        "grantName": "Vermont Arts Council: Artist Fellowships",
+        "country": "United States",
+        "fundingOrganization": "Vermont Arts Council",
+        "website": "https://www.vermontartscouncil.org/",
+        "grantAmount": "$7,500",
+        "eligibleDisciplines": ["All artistic disciplines"],
+        "applicationFrequency": "Ongoing",
+        "keyRequirements": "Vermont-based artists",
+        "typicalDeadlines": ["Ongoing"]
+      },
+      {
+        "grantName": "Women's Studio Workshop: Artist Residency Program",
+        "country": "United States",
+        "fundingOrganization": "Women's Studio Workshop",
+        "website": "https://wsworkshop.org/",
+        "grantAmount": "$350/week stipend, $500 for materials, $250 for travel, studio and housing for 6–8 weeks",
+        "eligibleDisciplines": ["Visual Arts"],
+        "applicationFrequency": "Ongoing",
+        "keyRequirements": "Female artists",
+        "typicalDeadlines": ["Ongoing"]
+      }
+    ]

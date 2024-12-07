@@ -16,15 +16,28 @@ function getCountryCode(country) {
     lowerCountry.includes('scotland') ||
     lowerCountry.includes('wales') ||
     lowerCountry.includes('northern ireland')
-  ) {
-    return 'GB'
-  }
+  ) return 'GB'
 
   if (lowerCountry.includes('australia')) return 'AU'
   if (lowerCountry.includes('mexico')) return 'MX'
   if (lowerCountry.includes('sweden')) return 'SE'
   if (lowerCountry.includes('germany')) return 'DE'
   if (lowerCountry.includes('new zealand')) return 'NZ'
+  if (lowerCountry.includes('singapore')) return 'SG'
+  if (lowerCountry.includes('switzerland')) return 'CH'
+  if (lowerCountry.includes('france')) return 'FR'
+  if (lowerCountry.includes('netherlands')) return 'NL'
+  if (lowerCountry.includes('ireland')) return 'IE'
+  if (lowerCountry.includes('japan')) return 'JP'
+  if (lowerCountry.includes('china')) return 'CN'
+  if (lowerCountry.includes('brazil')) return 'BR'
+  if (lowerCountry.includes('south africa')) return 'ZA'
+  if (lowerCountry.includes('india')) return 'IN'
+  if (lowerCountry.includes('norway')) return 'NO'
+  if (lowerCountry.includes('denmark')) return 'DK'
+  if (lowerCountry.includes('spain')) return 'ES'
+  if (lowerCountry.includes('italy')) return 'IT'
+  if (lowerCountry.includes('poland')) return 'PL'
 
   return ''
 }
@@ -97,7 +110,7 @@ export default function GrantsPage() {
 
   const handleDisciplineChange = (e) => {
     setDisciplineFilter(e.target.value)
-    // Optional: Update URL if needed for discipline too
+    // Optional: Update URL for discipline as well if desired
   }
 
   return (
@@ -143,6 +156,21 @@ export default function GrantsPage() {
               <option value="Sweden">Sweden</option>
               <option value="Germany">Germany</option>
               <option value="New Zealand">New Zealand</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="France">France</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Japan">Japan</option>
+              <option value="China">China</option>
+              <option value="Brazil">Brazil</option>
+              <option value="South Africa">South Africa</option>
+              <option value="India">India</option>
+              <option value="Norway">Norway</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Spain">Spain</option>
+              <option value="Italy">Italy</option>
+              <option value="Poland">Poland</option>
             </select>
 
             <select
@@ -195,6 +223,21 @@ export default function GrantsPage() {
           <option value="Sweden">Sweden</option>
           <option value="Germany">Germany</option>
           <option value="New Zealand">New Zealand</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="France">France</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Japan">Japan</option>
+          <option value="China">China</option>
+          <option value="Brazil">Brazil</option>
+          <option value="South Africa">South Africa</option>
+          <option value="India">India</option>
+          <option value="Norway">Norway</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Spain">Spain</option>
+          <option value="Italy">Italy</option>
+          <option value="Poland">Poland</option>
         </select>
 
         <select
