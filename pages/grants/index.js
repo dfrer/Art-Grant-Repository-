@@ -5,15 +5,11 @@ import grantsData from '../../data/grants.json'
 import Link from 'next/link'
 import Flag from 'react-world-flags'
 
-// Helper function to map country names to ISO codes
 function getCountryCode(country) {
   const lowerCountry = country.toLowerCase()
-  if (lowerCountry.includes('usa')) {
-    return 'US'
-  }
-  if (lowerCountry.includes('canada')) {
-    return 'CA'
-  }
+  
+  if (lowerCountry.includes('usa')) return 'US'
+  if (lowerCountry.includes('canada')) return 'CA'
   if (
     lowerCountry.includes('uk') ||
     lowerCountry.includes('england') ||
@@ -23,6 +19,13 @@ function getCountryCode(country) {
   ) {
     return 'GB'
   }
+
+  if (lowerCountry.includes('australia')) return 'AU'
+  if (lowerCountry.includes('mexico')) return 'MX'
+  if (lowerCountry.includes('sweden')) return 'SE'
+  if (lowerCountry.includes('germany')) return 'DE'
+  if (lowerCountry.includes('new zealand')) return 'NZ'
+
   return ''
 }
 
@@ -34,7 +37,6 @@ export default function GrantsPage() {
   const [disciplineFilter, setDisciplineFilter] = useState('All')
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
-  // On load or when query changes, sync state from URL
   useEffect(() => {
     if (router.query.country) {
       setCountryFilter(router.query.country)
@@ -43,9 +45,6 @@ export default function GrantsPage() {
     }
     if (router.query.search) {
       setSearchTerm(router.query.search)
-    } else {
-      // Only reset if no search param, optional:
-      // setSearchTerm('')
     }
   }, [router.query])
 
@@ -56,17 +55,14 @@ export default function GrantsPage() {
 
   const filteredGrants = useMemo(() => {
     return grantsData.filter(grant => {
-      // Search filter
       const matchesSearch = searchTerm === '' || (
         grant.grantName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         grant.fundingOrganization.toLowerCase().includes(searchTerm.toLowerCase())
       )
 
-      // Country filter
       const matchesCountry = countryFilter === 'All' || 
         grant.country.toLowerCase().includes(countryFilter.toLowerCase())
 
-      // Discipline filter
       const matchesDiscipline = disciplineFilter === 'All' ||
         grant.eligibleDisciplines.map(d => d.toLowerCase()).includes(disciplineFilter.toLowerCase())
 
@@ -77,7 +73,6 @@ export default function GrantsPage() {
   const handleSearchKeyDown = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault()
-      // Update URL with the current searchTerm
       router.push({
         pathname: '/grants',
         query: {
@@ -102,14 +97,13 @@ export default function GrantsPage() {
 
   const handleDisciplineChange = (e) => {
     setDisciplineFilter(e.target.value)
-    // optional: update URL if you want queries for disciplines as well
+    // Optional: Update URL if needed for discipline too
   }
 
   return (
     <Layout>
       <h1 className="text-3xl font-bold mb-4">All Grants</h1>
 
-      {/* Mobile Filters Button */}
       <div className="md:hidden mb-4">
         <button 
           onClick={() => setIsFilterOpen(true)} 
@@ -119,16 +113,13 @@ export default function GrantsPage() {
         </button>
       </div>
 
-      {/* Mobile Filter Drawer */}
       {isFilterOpen && (
         <div className="fixed inset-0 bg-white z-50 p-4 overflow-auto">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold">Filters</h2>
             <button onClick={() => setIsFilterOpen(false)} className="underline text-sm">Close</button>
           </div>
-
           <div className="flex flex-col space-y-4">
-            {/* Search Field */}
             <input
               type="text"
               className="border rounded px-4 py-2 w-full"
@@ -138,7 +129,6 @@ export default function GrantsPage() {
               onKeyDown={handleSearchKeyDown}
             />
 
-            {/* Country Filter */}
             <select
               className="border rounded px-4 py-2"
               value={countryFilter}
@@ -148,9 +138,13 @@ export default function GrantsPage() {
               <option value="USA">USA</option>
               <option value="Canada">Canada</option>
               <option value="UK">UK</option>
+              <option value="Australia">Australia</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Germany">Germany</option>
+              <option value="New Zealand">New Zealand</option>
             </select>
 
-            {/* Discipline Filter */}
             <select
               className="border rounded px-4 py-2"
               value={disciplineFilter}
@@ -167,7 +161,7 @@ export default function GrantsPage() {
                 setCountryFilter('All')
                 setDisciplineFilter('All')
                 setSearchTerm('')
-                router.push('/grants') // Reset to all
+                router.push('/grants')
               }} 
               className="underline text-sm text-gray-600"
             >
@@ -177,9 +171,7 @@ export default function GrantsPage() {
         </div>
       )}
 
-      {/* Desktop Filters */}
       <div className="hidden md:flex items-center space-x-4 mb-4">
-        {/* Search Input */}
         <input
           type="text"
           className="border rounded px-4 py-2"
@@ -189,7 +181,6 @@ export default function GrantsPage() {
           onKeyDown={handleSearchKeyDown}
         />
 
-        {/* Country Filter */}
         <select
           className="border rounded px-4 py-2"
           value={countryFilter}
@@ -199,9 +190,13 @@ export default function GrantsPage() {
           <option value="USA">USA</option>
           <option value="Canada">Canada</option>
           <option value="UK">UK</option>
+          <option value="Australia">Australia</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Germany">Germany</option>
+          <option value="New Zealand">New Zealand</option>
         </select>
 
-        {/* Discipline Filter */}
         <select
           className="border rounded px-4 py-2"
           value={disciplineFilter}
@@ -214,7 +209,6 @@ export default function GrantsPage() {
         </select>
       </div>
 
-      {/* Grants Listing */}
       {filteredGrants.length === 0 ? (
         <p>No grants found matching your criteria.</p>
       ) : (
