@@ -1,8 +1,9 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Layout from '../../components/Layout'
 import grantsData from '../../data/grants.json'
 import Link from 'next/link'
-import Flag from 'react-world-flags' // Flag rendering library
+import Flag from 'react-world-flags'
 
 // Helper function to map country names to ISO codes
 function getCountryCode(country) {
@@ -13,23 +14,44 @@ function getCountryCode(country) {
   if (lowerCountry.includes('canada')) {
     return 'CA'
   }
-  if (lowerCountry.includes('uk') || lowerCountry.includes('england') || lowerCountry.includes('scotland') || lowerCountry.includes('wales') || lowerCountry.includes('northern ireland')) {
+  if (
+    lowerCountry.includes('uk') ||
+    lowerCountry.includes('england') ||
+    lowerCountry.includes('scotland') ||
+    lowerCountry.includes('wales') ||
+    lowerCountry.includes('northern ireland')
+  ) {
     return 'GB'
   }
-  return '' // Default to an empty string if no match
+  return ''
 }
 
 export default function GrantsPage() {
+  const router = useRouter()
+  
   const [searchTerm, setSearchTerm] = useState('')
   const [countryFilter, setCountryFilter] = useState('All')
   const [disciplineFilter, setDisciplineFilter] = useState('All')
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
-  // Extract unique disciplines from grants data
+  // On load or when query changes, sync state from URL
+  useEffect(() => {
+    if (router.query.country) {
+      setCountryFilter(router.query.country)
+    } else {
+      setCountryFilter('All')
+    }
+    if (router.query.search) {
+      setSearchTerm(router.query.search)
+    } else {
+      // Only reset if no search param, optional:
+      // setSearchTerm('')
+    }
+  }, [router.query])
+
   const disciplines = useMemo(() => {
     const allDisciplines = grantsData.flatMap(g => g.eligibleDisciplines || [])
-    const unique = Array.from(new Set(allDisciplines)).sort()
-    return unique
+    return Array.from(new Set(allDisciplines)).sort()
   }, [])
 
   const filteredGrants = useMemo(() => {
@@ -41,7 +63,8 @@ export default function GrantsPage() {
       )
 
       // Country filter
-      const matchesCountry = countryFilter === 'All' || grant.country.toLowerCase().includes(countryFilter.toLowerCase())
+      const matchesCountry = countryFilter === 'All' || 
+        grant.country.toLowerCase().includes(countryFilter.toLowerCase())
 
       // Discipline filter
       const matchesDiscipline = disciplineFilter === 'All' ||
@@ -50,6 +73,37 @@ export default function GrantsPage() {
       return matchesSearch && matchesCountry && matchesDiscipline
     })
   }, [searchTerm, countryFilter, disciplineFilter])
+
+  const handleSearchKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      // Update URL with the current searchTerm
+      router.push({
+        pathname: '/grants',
+        query: {
+          ...router.query,
+          search: searchTerm
+        }
+      })
+    }
+  }
+
+  const handleCountryChange = (e) => {
+    setCountryFilter(e.target.value)
+    router.push({
+      pathname: '/grants',
+      query: {
+        ...router.query,
+        country: e.target.value === 'All' ? undefined : e.target.value,
+        search: searchTerm || undefined
+      }
+    })
+  }
+
+  const handleDisciplineChange = (e) => {
+    setDisciplineFilter(e.target.value)
+    // optional: update URL if you want queries for disciplines as well
+  }
 
   return (
     <Layout>
@@ -65,7 +119,7 @@ export default function GrantsPage() {
         </button>
       </div>
 
-      {/* Filter Drawer (Mobile) */}
+      {/* Mobile Filter Drawer */}
       {isFilterOpen && (
         <div className="fixed inset-0 bg-white z-50 p-4 overflow-auto">
           <div className="flex justify-between items-center mb-4">
@@ -81,13 +135,14 @@ export default function GrantsPage() {
               placeholder="Search by name or org..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
+              onKeyDown={handleSearchKeyDown}
             />
 
             {/* Country Filter */}
             <select
               className="border rounded px-4 py-2"
               value={countryFilter}
-              onChange={e => setCountryFilter(e.target.value)}
+              onChange={handleCountryChange}
             >
               <option value="All">All Countries</option>
               <option value="USA">USA</option>
@@ -99,7 +154,7 @@ export default function GrantsPage() {
             <select
               className="border rounded px-4 py-2"
               value={disciplineFilter}
-              onChange={e => setDisciplineFilter(e.target.value)}
+              onChange={handleDisciplineChange}
             >
               <option value="All">All Disciplines</option>
               {disciplines.map((disc, idx) => (
@@ -112,6 +167,7 @@ export default function GrantsPage() {
                 setCountryFilter('All')
                 setDisciplineFilter('All')
                 setSearchTerm('')
+                router.push('/grants') // Reset to all
               }} 
               className="underline text-sm text-gray-600"
             >
@@ -130,13 +186,14 @@ export default function GrantsPage() {
           placeholder="Search by name or organization..."
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
+          onKeyDown={handleSearchKeyDown}
         />
 
         {/* Country Filter */}
         <select
           className="border rounded px-4 py-2"
           value={countryFilter}
-          onChange={e => setCountryFilter(e.target.value)}
+          onChange={handleCountryChange}
         >
           <option value="All">All Countries</option>
           <option value="USA">USA</option>
@@ -148,7 +205,7 @@ export default function GrantsPage() {
         <select
           className="border rounded px-4 py-2"
           value={disciplineFilter}
-          onChange={e => setDisciplineFilter(e.target.value)}
+          onChange={handleDisciplineChange}
         >
           <option value="All">All Disciplines</option>
           {disciplines.map((disc, idx) => (

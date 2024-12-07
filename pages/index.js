@@ -1,25 +1,47 @@
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
 import Link from 'next/link'
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const router = useRouter()
+
+  const handleSearchKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      // Navigate to grants page with search query
+      router.push(`/grants?search=${encodeURIComponent(searchTerm)}`)
+    }
+  }
+
   return (
     <Layout>
       <div className="text-center max-w-xl mx-auto mt-20">
         <h1 className="text-4xl font-bold mb-6">Find the Right Art Grant for You</h1>
         <p className="mb-8 text-gray-700">
-          Browse and discover art grants available in the US and Canada. Filter by discipline, amount, and more.
+          Browse and discover art grants available in the US, Canada, and the UK. Filter by discipline, amount, and more.
         </p>
         
         <div className="mb-8">
-          {/* Placeholder for a future search bar component */}
           <input
             type="text"
             className="border rounded px-4 py-2 w-full mb-4"
             placeholder="Search grants..."
+            value={searchTerm}
+            onChange={e => setSearchTerm(e.target.value)}
+            onKeyDown={handleSearchKeyDown}
           />
           <div className="flex justify-center space-x-4">
-            <Link href="/grants?country=USA" className="underline text-blue-600">USA Grants</Link>
-            <Link href="/grants?country=Canada" className="underline text-blue-600">Canada Grants</Link>
+            <Link href={{ pathname: '/grants', query: { country: 'USA' }}} className="underline text-blue-600 hover:text-blue-800">
+              USA Grants
+            </Link>
+            <Link href={{ pathname: '/grants', query: { country: 'Canada' }}} className="underline text-blue-600 hover:text-blue-800">
+              Canada Grants
+            </Link>
+            <Link href={{ pathname: '/grants', query: { country: 'UK' }}} className="underline text-blue-600 hover:text-blue-800">
+              UK Grants
+            </Link>
           </div>
         </div>
 
