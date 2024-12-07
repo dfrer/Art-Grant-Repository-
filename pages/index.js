@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="text-center max-w-xl mx-auto mt-20">
-        <h1 className="text-4xl font-bold mb-6">Find the Right Art Grant for You</h1>
+        <h1 className="text-4xl font-bold mb-6">Search for art grants or browse by country.</h1>
         <p className="mb-8 text-gray-700">
           Browse and discover art grants available in many countries around the world.
         </p>
@@ -43,7 +43,6 @@ export default function Home() {
             <Link href={{ pathname: '/grants', query: { country: 'Singapore' }}} className="underline text-blue-600 hover:text-blue-800">Singapore</Link>
             <Link href={{ pathname: '/grants', query: { country: 'Switzerland' }}} className="underline text-blue-600 hover:text-blue-800">Switzerland</Link>
             <Link href={{ pathname: '/grants', query: { country: 'France' }}} className="underline text-blue-600 hover:text-blue-800">France</Link>
-            {/* Additional countries */}
             <Link href={{ pathname: '/grants', query: { country: 'Netherlands' }}} className="underline text-blue-600 hover:text-blue-800">Netherlands</Link>
             <Link href={{ pathname: '/grants', query: { country: 'Ireland' }}} className="underline text-blue-600 hover:text-blue-800">Ireland</Link>
             <Link href={{ pathname: '/grants', query: { country: 'Japan' }}} className="underline text-blue-600 hover:text-blue-800">Japan</Link>
